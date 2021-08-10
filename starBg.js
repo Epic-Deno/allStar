@@ -65,7 +65,7 @@ function initBg(canvas) {
     this.speed = random(this.orbitRadius) / 200000;
     //星星移动速度
     this.alpha = random(2, 10) / 10;
-
+    // console.log(this.orbitX, this.orbitY, this.orbitRadius)
     count++;
     stars[count] = this;
   }
@@ -74,7 +74,6 @@ function initBg(canvas) {
     let x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
       y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
       twinkle = random(10);
-
     if (twinkle === 1 && this.alpha > 0) {
       this.alpha -= 0.05;
     } else if (twinkle === 2 && this.alpha < 1) {
